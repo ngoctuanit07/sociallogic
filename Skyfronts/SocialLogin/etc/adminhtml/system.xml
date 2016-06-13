@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/system_file.xsd">
+    <system>
+         <section id="customer" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+            <tab>customer</tab>
+            <resource>Skyfronts_SocialLogin::sociallogin_config</resource>
+            <group id="skyfronts_sociallogin_google" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Sky Social Login - Google</label>
+                <field id="enabled" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable Google Login</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="client_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Google API Client ID</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="client_secret" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Google API Client Secret</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                 <field id="info" translate="label comment" sortOrder="31" type="hidden" showInDefault="1" showInWebsite="0" showInStore="0">
+          	   <comment><![CDATA[ <div style="margin-left: -132px;"> Link  <a style="padding-left: 100px;" href="https://console.developers.google.com/" target="_blank">Google Developer</a></div><br/>
+          	   					  <div style="margin-left: -134px;">JavaScript Origins  <a style="padding-left: 16px;"> http://demo2.skyfronts.com/</a></div><br/>
+          	   					  <div style="margin-left: -134px;">Redirect URIs  <a style="padding-left: 40px;">http://demo2.skyfronts.com/skyfronts/sociallogin/google/connect</a></div>
+          	   ]]></comment>
+                </field>
+                
+            </group>
+            <group id="skyfronts_sociallogin_facebook" translate="label" type="text" sortOrder="21" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Sky Social Login - Facebook</label>
+                <field id="enabled" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                   <label>Enable Facebook Login</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="client_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                   <label>Facebook App ID</label>
+                   <validate>required-entry</validate>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+				<field id="client_secret" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+				<label>Facebook App Secret</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                  <field id="info" translate="label comment" sortOrder="31" type="hidden" showInDefault="1" showInWebsite="0" showInStore="0">
+          	   <comment><![CDATA[ <div style="margin-left: -132px;">Link  <a style="padding-left: 100px;" href="https://developers.facebook.com/" target="_blank">Facebook Developer</a>  </div><br/>
+          	   					  <div style="margin-left: -134px;">App Domain <a style="padding-left: 45px;"> http://demo2.skyfronts.com/</a></div><br/>
+          	   					  <div style="margin-left: -134px;">Site Url  <a style="padding-left: 72px;">http://demo2.skyfronts.com/skyfrontssociallogin/facebook/connect</a></div>
+          	   ]]></comment>
+                </field>
+            </group>
+            <group id="skyfronts_sociallogin_twitter" translate="label" type="text" sortOrder="22" showInDefault="1" showInWebsite="0" showInStore="0">
+                <label>Sky Social Login - Twitter</label>
+                <field id="enabled" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Enable Twitter Login</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="client_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Consumer Key</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="client_secret" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Consumer Secret</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="info" translate="label comment" sortOrder="31" type="hidden" showInDefault="1" showInWebsite="0" showInStore="0">
+          	   <comment><![CDATA[ <div style="margin-left: -130px;">Link : <a style="padding-left: 146px;" href="https://dev.twitter.com/" target="_blank">Twitter Developer</a></div><br/>
+          	   					  <div style="margin-left: -130px;">Website URL : <a style="padding-left: 92px;">http://demo2.skyfronts.com/</a></div><br/>
+          	   					  <div style="margin-left: -134px;">Redirect URLs : <a style="padding-left: 12px;">http://demo2.skyfronts.com/skyfrontssociallogin/twitter/connect </a></div>
+          	   ]]></comment>
+                </field>
+            </group>
+           <!--  <group id="skyfronts_sociallogin_linkedin" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
+			  <label>Social Login Linkedin Configuration Options</label>
+                <field id="enabled" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+				   <label>Enable Linkedin Login</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="client_id" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Consumer Key</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="client_secret" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Consumer Secret</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group> -->
+        </section>
+    </system>
+</config>

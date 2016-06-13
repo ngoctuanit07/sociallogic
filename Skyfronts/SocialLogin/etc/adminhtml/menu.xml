@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 skyfronts.com. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<add id="Skyfronts_SocialLogin::skyfronts_sociallogin" title="Sky Social Login" module="Skyfronts_SocialLogin" sortOrder="1" parent="Skyfronts_Base::main_menu" action="adminhtml/system_config/edit/section/customer" resource="Skyfronts_SocialLogin::skyfronts_sociallogin"/>
+   	</menu>
+</config>
+
+

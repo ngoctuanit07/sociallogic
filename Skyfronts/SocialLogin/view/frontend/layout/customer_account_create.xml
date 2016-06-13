@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+
+
+    <head>
+
+           <!-- for css file -->
+
+          <css src="Skyfronts_SocialLogin::css/styles.css"/>
+
+          <css src="Skyfronts_SocialLogin::css/google/button.css"/>
+
+          <css src="Skyfronts_SocialLogin::css/facebook/button.css"/>
+
+          <css src="Skyfronts_SocialLogin::css/twitter/button.css"/>
+
+          <css src="Skyfronts_SocialLogin::css/linkedin/button.css"/>
+
+     </head>
+
+    <referenceContainer name="content">
+
+        <block after="customer_form_register" class="Skyfronts\SocialLogin\Block\Container\Login" name="skyfronts_sociallogin_register" template="register.phtml" cacheable="false">
+
+            <block class="Skyfronts\SocialLogin\Block\Google\Button" name="skyfronts_google_login_button" template="google/button.phtml" cacheable="false">
+
+                <arguments>
+
+                    <argument name="button_text" translate="true" xsi:type="string">Login</argument>
+
+                </arguments>
+
+            </block>
+
+            <block class="Skyfronts\SocialLogin\Block\Facebook\Button" name="skyfronts_facebook_login_button" template="facebook/button.phtml" cacheable="false">
+
+                <arguments>
+
+                    <argument name="button_text" translate="true" xsi:type="string">Login</argument>
+
+                </arguments>
+
+            </block>
+
+            <block class="Skyfronts\SocialLogin\Block\Twitter\Button" name="skyfronts_twitter_login_button" template="twitter/button.phtml" cacheable="false">
+
+                <arguments>
+
+                    <argument name="button_text" translate="true" xsi:type="string">Login</argument>
+
+                </arguments>
+
+            </block>
+
+            <block class="Skyfronts\SocialLogin\Block\Linkedin\Button" name="skyfronts_linkedin_login_button" template="linkedin/button.phtml" cacheable="false">
+
+                <arguments>
+
+                    <argument name="button_text" translate="true" xsi:type="string">Login</argument>
+
+                </arguments>
+
+            </block>
+
+
+
+        </block>
+
+    </referenceContainer>
+
+</page>

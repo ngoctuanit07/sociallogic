@@ -1,0 +1,27 @@
+<div class="skyfronts-sociallogin-login">
+    <div class="account-login">
+    <h2>Skyfronts Create Account via Social</h2>
+        <div class="<?php echo $this->_getColSet(); ?> skyfronts-sociallogin-login-lower">
+            <?php if($this->googleEnabled()): ?>
+            <div class="<?php echo $this->_getButtCol(); ?> skyfronts-sociallogin-login-lower-google">
+                <?php echo $this->getChildHtml('skyfronts_google_login_button'); ?>
+            </div>
+            <?php endif; ?>
+            <?php if($this->facebookEnabled()): ?>
+            <div class="<?php echo $this->_getButtCol(); ?> skyfronts-sociallogin-login-lower-facebook">
+                <?php echo $this->getChildHtml('skyfronts_facebook_login_button'); ?>
+            </div>
+            <?php endif; ?>
+            <?php if($this->twitterEnabled()): ?>
+            <div class="<?php echo $this->_getButtCol(); ?> skyfronts-sociallogin-login-lower-twitter">
+                <?php echo $this->getChildHtml('skyfronts_twitter_login_button'); ?>
+            </div>
+            <?php endif; ?>
+             <?php if($this->linkedinEnabled()): ?>
+            <div class="<?php echo $this->_getButtCol(); ?> skyfronts-sociallogin-login-lower-linkedin">
+                <?php echo $this->getChildHtml('skyfronts_linkedin_login_button'); ?>
+            </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>

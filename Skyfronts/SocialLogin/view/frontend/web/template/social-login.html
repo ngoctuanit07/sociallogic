@@ -1,0 +1,19 @@
+<div class="actions-toolbar">
+	<ul class="">
+	<!-- ko if: (facebook_enable) -->
+		<li class="social-icon facebook-icon"> 
+			<a data-bind="attr: { href:facebook_auth_link }"><img data-bind="attr: { src: facebook_link }" alt=""/></a>
+		</li>
+    <!--/ko-->
+    	<!-- ko if: (google_enable) -->
+		<li class="social-icon google-icon"> 
+			<a data-bind="attr: { href:google_auth_link }" ><img data-bind="attr: { src: google_link }" alt=""/></a>
+		</li>
+		   <!--/ko-->
+			<!-- ko if: (twitter_enable) -->
+		<li class="social-icon twitter-icon"> 
+			<a data-bind="attr: { href:twitter_auth_link }" ><img data-bind="attr: { src: twitter_link }"/></a>
+		</li>
+		   <!--/ko-->
+	</ul>
+</div>
